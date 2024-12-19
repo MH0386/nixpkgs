@@ -6253,10 +6253,7 @@ with pkgs;
     enableOffload = true;
   });
 
-  gcc_amd = wrapCC (gcc.cc.override {
-    offloadTarget = "amdgcn-amdhsa";
-    withoutTargetLibc = true;
-  });
+  amdgcc = pkgsCross.amdgcn.buildPackages.gcc;
 
   libgccjit = gcc.cc.override {
     name = "libgccjit";
