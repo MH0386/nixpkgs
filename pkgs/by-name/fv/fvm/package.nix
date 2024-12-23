@@ -6,7 +6,7 @@
   gtk3,
   cmake,
   fetchFromGitHub,
-  lib
+  lib,
 }:
 
 buildDartApplication rec {
