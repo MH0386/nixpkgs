@@ -6,6 +6,7 @@
   gtk3,
   cmake,
   fetchFromGitHub,
+  lib
 }:
 
 buildDartApplication rec {
@@ -18,6 +19,7 @@ buildDartApplication rec {
     hash = "sha256-i7sJRBrS5qyW8uGlx+zg+wDxsxgmolTMcikHyOzv3Bs=";
   };
   autoPubspecLock = src + "/pubspec.lock";
+  disablePubspecLockCheck = true;
   nativeBuildInputs = [
     installShellFiles
     clang
@@ -38,4 +40,11 @@ buildDartApplication rec {
       --fish <($out/bin/fvm --generate-shell-completion fish) \
       --zsh <($out/bin/fvm --generate-shell-completion zsh)
   '';
+  meta = with lib; {
+    description = "Flutter Version Management: A simple CLI to manage Flutter SDK versions.";
+    homepage = "https://fvm.app";
+    license = licenses.mit;
+    platforms = platforms.all;
+    # maintainers = with maintainers; [  ];
+  };
 }
