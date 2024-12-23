@@ -2155,6 +2155,11 @@
     github = "AtilaSaraiva";
     githubId = 29521461;
   };
+  atinba = {
+    name = "Atin Bainada";
+    github = "atinba";
+    githubId = 61903527;
+  };
   atkinschang = {
     email = "atkinschang+nixpkgs@gmail.com";
     github = "AtkinsChang";
@@ -2990,6 +2995,12 @@
     githubId = 133602;
     name = "Bjørn Forsman";
   };
+  bjsowa = {
+    email = "bsowa123@gmail.com";
+    github = "bjsowa";
+    githubId = 23124539;
+    name = "Błażej Sowa";
+  };
   bkchr = {
     email = "nixos@kchr.de";
     github = "bkchr";
@@ -3126,6 +3137,12 @@
     github = "boj";
     githubId = 50839;
     name = "Brian Jones";
+  };
+  boldikoller = {
+    email = "boldi.koller@wtss.eu";
+    github = "boldikoller";
+    githubId = 182646310;
+    name = "Boldi Koller";
   };
   boltzmannrain = {
     email = "boltzmannrain@gmail.com";
@@ -12267,6 +12284,12 @@
     githubId = 5759930;
     name = "Alexis Destrez";
   };
+  krovuxdev = {
+    name = "krovuxdev";
+    email = "krovuxdev@proton.me";
+    github = "krovuxdev";
+    githubId = 62192487;
+  };
   krupkat = {
     github = "krupkat";
     githubId = 6817216;
@@ -13174,6 +13197,11 @@
     github = "lrewega";
     githubId = 639066;
     name = "Luke Rewega";
+  };
+  lriesebos = {
+    name = "Leon Riesebos";
+    github = "lriesebos";
+    githubId = 28567817;
   };
   lromor = {
     email = "leonardo.romor@gmail.com";
