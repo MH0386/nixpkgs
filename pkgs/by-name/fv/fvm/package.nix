@@ -19,7 +19,9 @@ buildDartApplication rec {
     tag = version;
     hash = "sha256-i7sJRBrS5qyW8uGlx+zg+wDxsxgmolTMcikHyOzv3Bs=";
   };
-  autoPubspecLock = "${src.outPath}/pubspec.lock";
+
+  pubspecLock = lib.importJSON ./pubspec.lock.json;
+
   nativeBuildInputs = [
     installShellFiles
     clang
@@ -28,11 +30,14 @@ buildDartApplication rec {
     cmake
     installShellFiles
   ];
+
   shellHook = ''
     export PKG_CONFIG_PATH=${gtk3.dev}/lib/pkgconfig
     export LD_LIBRARY_PATH=${gtk3.out}/lib:$LD_LIBRARY_PATH
   '';
+
   dontUseCmakeConfigure = true;
+
   postInstall = ''
     export HOME=$TMPDIR
     installShellCompletion --cmd fvm \
@@ -40,6 +45,7 @@ buildDartApplication rec {
       --fish <($out/bin/fvm --generate-shell-completion fish) \
       --zsh <($out/bin/fvm --generate-shell-completion zsh)
   '';
+  
   meta = {
     description = "Flutter Version Management: A simple CLI to manage Flutter SDK versions.";
     homepage = "https://fvm.app";
