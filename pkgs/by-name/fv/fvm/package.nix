@@ -45,7 +45,7 @@ buildDartApplication rec {
       --fish <($out/bin/fvm --generate-shell-completion fish) \
       --zsh <($out/bin/fvm --generate-shell-completion zsh)
   '';
-  
+
   meta = {
     description = "Flutter Version Management: A simple CLI to manage Flutter SDK versions.";
     homepage = "https://fvm.app";
