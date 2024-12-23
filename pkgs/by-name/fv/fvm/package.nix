@@ -15,7 +15,7 @@ buildDartApplication rec {
   src = fetchFromGitHub {
     owner = "leoafarias";
     repo = pname;
-    rev = "refs/tags/${version}";
+    tag = version;
     hash = "sha256-i7sJRBrS5qyW8uGlx+zg+wDxsxgmolTMcikHyOzv3Bs=";
   };
   autoPubspecLock = "${src}/pubspec.lock";
