@@ -40,11 +40,11 @@ buildDartApplication rec {
       --fish <($out/bin/fvm --generate-shell-completion fish) \
       --zsh <($out/bin/fvm --generate-shell-completion zsh)
   '';
-  meta = with lib; {
+  meta = {
     description = "Flutter Version Management: A simple CLI to manage Flutter SDK versions.";
     homepage = "https://fvm.app";
-    license = licenses.mit;
-    platforms = platforms.all;
-    # maintainers = with maintainers; [  ];
+    license = lib.licenses.mit;
+    platforms = lib.platforms.all;
+    # maintainers = [  ];
   };
 }
