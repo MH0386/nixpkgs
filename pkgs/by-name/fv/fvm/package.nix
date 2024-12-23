@@ -12,6 +12,7 @@
 buildDartApplication rec {
   pname = "fvm";
   version = "3.2.1";
+  
   src = fetchFromGitHub {
     owner = "leoafarias";
     repo = pname;
