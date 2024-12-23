@@ -18,8 +18,7 @@ buildDartApplication rec {
     rev = version;
     hash = "sha256-i7sJRBrS5qyW8uGlx+zg+wDxsxgmolTMcikHyOzv3Bs=";
   };
-  autoPubspecLock = src + "/pubspec.lock";
-  disablePubspecLockCheck = true;
+  pubspecLock = lib.importJSON ./pubspec.lock.json;
   nativeBuildInputs = [
     installShellFiles
     clang
