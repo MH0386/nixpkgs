@@ -18,7 +18,7 @@ buildDartApplication rec {
     rev = version;
     hash = "sha256-i7sJRBrS5qyW8uGlx+zg+wDxsxgmolTMcikHyOzv3Bs=";
   };
-  autoPubspecLock = src + "/pubspec.lock";
+  autoPubspecLock = "${src.name}/pubspec.lock";
   nativeBuildInputs = [
     installShellFiles
     clang
