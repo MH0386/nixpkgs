@@ -6,6 +6,7 @@
   gtk3,
   cmake,
   fetchFromGitHub,
+  nix-update-script,
   lib,
 }:
 
