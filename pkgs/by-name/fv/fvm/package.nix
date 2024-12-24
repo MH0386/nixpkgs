@@ -38,6 +38,8 @@ buildDartApplication rec {
 
   dontUseCmakeConfigure = true;
 
+  passthru.updateScript = nix-update-script { };
+  
   postInstall = ''
     export HOME=$TMPDIR
     installShellCompletion --cmd fvm \
